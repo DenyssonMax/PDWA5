@@ -1,6 +1,3 @@
-# PDWA5
-
-
 
 <!DOCTYPE html>
 
@@ -15,7 +12,7 @@ Repositório de atividades da disciplina de Programação dinamica para web.    
     
 </head>
 <body>
-    <h1>Atividades</h1>
+    <h1>Atividades PDWA5</h1>
     <h3>:page_with_curl:Atividade 1</h3>
     <p><a href="https://github.com/DenyssonMax/PDWA5/tree/main/Atividades/rest"  >Atividade utilizando rest</a></p>
     <h3>:page_with_curl:Atividade </h3>
