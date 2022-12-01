@@ -6,27 +6,27 @@ header("Access-Control-Allow-Methods: GET");
 header('Content-Type: application/json');
 
 // include database and object files
-include_once '../config/database/Database.php';
-include_once '../objects/Product.php';
+include_once '../config/database/database.php';
+include_once '../main/products.php'
 
 // get database connection
 $database = new Database();
 $db = $database->getConnection();
 
 // prepare product object
-$product = new Product($db);
+$products = new products($db);
 
 // registra o id para leitura
-$product->id = isset($_GET['id']) ? $_GET['id'] : die();
+$products->id = isset($_GET['id']) ? $_GET['id'] : die();
 
 // read the details of product to be edited
-$product->readId();
+$products->readId();
 
 if ($product->name != null) {
     // create array
     $product_arr = array(
-        "id" =>  $product->id,
-        "name" => $product->name,
+        "id" =>  $products->id,
+        "name" => $products->name,
         "description" => $product->description,
         "price" => $product->price,
         "category_id" => $product->category_id,

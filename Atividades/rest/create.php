@@ -7,15 +7,15 @@ header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
   
 // get database connection
-include_once 'config/database/Database.php';
+include_once 'config/database/database.php';
 
 // instantiate product object
-include_once 'objects/Product.php';
+include_once 'main/products.php';
   
 $database = new Database();
 $db = $database->getConnection();
   
-$product = new Product($db);
+$product = new products($db);
   
 // get posted data
 $data = json_decode(file_get_contents("php://input"));
@@ -36,7 +36,7 @@ if(
     $product->created = date('Y-m-d H:i:s');
   
     // create the product
-    if($product->create()){
+    if($products->create()){
   
         // set response code - 201 created
         http_response_code(201);

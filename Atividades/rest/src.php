@@ -5,15 +5,15 @@ header("Content-Type: application/json; charset=UTF-8");
   
 // include database and object files
 include_once '../config/core.php';
-include_once '../config/database/Database.php';
-include_once '../objects/Product.php';
+include_once '../config/database/database.php';
+include_once 'main/products.php';
   
 // instantiate database and product object
 $database = new Database();
 $db = $database->getConnection();
   
 // initialize object
-$product = new Product($db);
+$product = new products($db);
   
 // get keywords
 $keywords=isset($_GET["s"]) ? $_GET["s"] : "";
