@@ -2,6 +2,6 @@
 	$server = "localhost";
 	$user = "root";
 	$password = "root";
-	$dbname = "pdwa5";
+	$dbname = "PDWA5";
 	
 	$conn = mysqli_connect($server, $user, $password, $dbname);
