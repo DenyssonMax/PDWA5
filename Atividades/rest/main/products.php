@@ -1,5 +1,5 @@
 <?php
-class Products
+class products
 {
 
     // database connection and table name
